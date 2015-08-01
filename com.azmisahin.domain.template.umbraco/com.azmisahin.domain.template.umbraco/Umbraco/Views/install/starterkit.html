@@ -1,0 +1,23 @@
+﻿<div ng-controller="Umbraco.Installer.PackagesController" id="starterKits">
+	<h1>Bir web sitesi kurun</h1>
+
+	<p>
+        Bir başlangıç ​​web sitesi yüklenmesi CMS nasıl çalıştığını öğrenmek yardımcı olur ve size sağlam verir
+        ve basit temeli üstüne inşa etmek.
+	</p>
+    
+    <small ng-if="!packages || packages.length == 0">Yükleniyor...</small>
+
+    <ul class="thumbnails">        
+        <li class="span3" ng-repeat="pck in packages">
+            <a href ng-click="setPackageAndContinue(pck.id)" class="thumbnail">
+                <small>Yükleniyor...</small>
+                <img ng-src="http://our.umbraco.org{{pck.thumbnail}}" alt="{{pck.name}}">
+            </a>
+        </li>
+    </ul>
+
+    <a href ng-click="setPackageAndContinue('00000000-0000-0000-0000-000000000000')" class="btn btn-link btn-link-reverse">
+        Hayır teşekkürler, ben bir başlangıç ​​web sitesi kurmak istemiyorum
+    </a>
+</div>

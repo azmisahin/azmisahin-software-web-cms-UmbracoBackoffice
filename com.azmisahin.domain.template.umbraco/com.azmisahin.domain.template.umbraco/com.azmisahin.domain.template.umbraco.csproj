@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5CA285EC-690F-4F64-BCE3-E5526128C756}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.azmisahin.domain.template.umbraco</RootNamespace>
+    <AssemblyName>com.azmisahin.domain.template.umbraco</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\404handlers.config" />
+    <Content Include="Config\applications.config" />
+    <Content Include="Config\BaseRestExtensions.config" />
+    <Content Include="Config\ClientDependency.config" />
+    <Content Include="Config\Dashboard.config" />
+    <Content Include="Config\EmbeddedMedia.config" />
+    <Content Include="Config\ExamineIndex.config" />
+    <Content Include="Config\ExamineSettings.config" />
+    <Content Include="Config\feedProxy.config" />
+    <Content Include="Config\FileSystemProviders.config" />
+    <Content Include="Config\log4net.config" />
+    <Content Include="Config\metablogConfig.config" />
+    <Content Include="Config\scripting.config" />
+    <Content Include="Config\tinyMceConfig.config" />
+    <Content Include="Config\trees.config" />
+    <Content Include="Config\umbracoSettings.config" />
+    <Content Include="Config\UrlRewriting.config" />
+    <Content Include="favicon.png" />
+    <Content Include="GenericError.html" />
+    <Content Include="index.html" />
+    <Content Include="InternalError.html" />
+    <Content Include="NotFound.html" />
+    <Content Include="Readme.html" />
+    <Content Include="robots.txt" />
+    <Content Include="Storage\Content\css\application.css" />
+    <Content Include="Storage\Content\js\analytics.js" />
+    <Content Include="Storage\Content\js\application.js" />
+    <Content Include="Storage\Content\js\application.mobile.js" />
+    <Content Include="Storage\Content\js\init.js" />
+    <Content Include="Umbraco\Views\AuthorizeUpgrade.cshtml" />
+    <Content Include="Umbraco\Views\dashboard\default\Thumbs.db" />
+    <Content Include="Umbraco\Views\Default.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\grid.editors.config.js" />
+    <Content Include="Config\Splashes - Kopya\booting.aspx" />
+    <Content Include="Config\Splashes - Kopya\noNodes.aspx" />
+    <Content Include="Config\Splashes\booting.aspx" />
+    <Content Include="Config\Splashes\noNodes.aspx" />
+    <Content Include="Umbraco\Config\Create\UI.xml" />
+    <Content Include="Umbraco\Config\Lang\cs.xml" />
+    <Content Include="Umbraco\Config\Lang\da.xml" />
+    <Content Include="Umbraco\Config\Lang\de.xml" />
+    <Content Include="Umbraco\Config\Lang\en.xml" />
+    <Content Include="Umbraco\Config\Lang\en_us.xml" />
+    <Content Include="Umbraco\Config\Lang\es.xml" />
+    <Content Include="Umbraco\Config\Lang\fr.xml" />
+    <Content Include="Umbraco\Config\Lang\he.xml" />
+    <Content Include="Umbraco\Config\Lang\it.xml" />
+    <Content Include="Umbraco\Config\Lang\ja.xml" />
+    <Content Include="Umbraco\Config\Lang\ko.xml" />
+    <Content Include="Umbraco\Config\Lang\nl.xml" />
+    <Content Include="Umbraco\Config\Lang\no.xml" />
+    <Content Include="Umbraco\Config\Lang\pl.xml" />
+    <Content Include="Umbraco\Config\Lang\pt.xml" />
+    <Content Include="Umbraco\Config\Lang\ru.xml" />
+    <Content Include="Umbraco\Config\Lang\sv.xml" />
+    <Content Include="Umbraco\Config\Lang\tr.xml" />
+    <Content Include="Umbraco\Config\Lang\zh.xml" />
+    <Content Include="Umbraco\Views\common\dashboard.html" />
+    <Content Include="Umbraco\Views\common\dialogs\approvedcolorpicker.html" />
+    <Content Include="Umbraco\Views\common\dialogs\content\edit.html" />
+    <Content Include="Umbraco\Views\common\dialogs\help.html" />
+    <Content Include="Umbraco\Views\common\dialogs\iconpicker.html" />
+    <Content Include="Umbraco\Views\common\dialogs\insertmacro.html" />
+    <Content Include="Umbraco\Views\common\dialogs\legacydelete.html" />
+    <Content Include="Umbraco\Views\common\dialogs\linkpicker.html" />
+    <Content Include="Umbraco\Views\common\dialogs\login.html" />
+    <Content Include="Umbraco\Views\common\dialogs\macropicker.html" />
+    <Content Include="Umbraco\Views\common\dialogs\mediapicker.html" />
+    <Content Include="Umbraco\Views\common\dialogs\membergrouppicker.html" />
+    <Content Include="Umbraco\Views\common\dialogs\property.html" />
+    <Content Include="Umbraco\Views\common\dialogs\rteembed.html" />
+    <Content Include="Umbraco\Views\common\dialogs\template\querybuilder.html" />
+    <Content Include="Umbraco\Views\common\dialogs\treepicker.html" />
+    <Content Include="Umbraco\Views\common\dialogs\user.html" />
+    <Content Include="Umbraco\Views\common\dialogs\ysod.html" />
+    <Content Include="Umbraco\Views\common\legacy.html" />
+    <Content Include="Umbraco\Views\common\login.html" />
+    <Content Include="Umbraco\Views\common\notifications\confirmroutechange.html" />
+    <Content Include="Umbraco\Views\contenttype\edit.html" />
+    <Content Include="Umbraco\Views\content\copy.html" />
+    <Content Include="Umbraco\Views\content\create.html" />
+    <Content Include="Umbraco\Views\content\delete.html" />
+    <Content Include="Umbraco\Views\content\edit.html" />
+    <Content Include="Umbraco\Views\content\emptyrecyclebin.html" />
+    <Content Include="Umbraco\Views\content\move.html" />
+    <Content Include="Umbraco\Views\content\recyclebin.html" />
+    <Content Include="Umbraco\Views\content\umbpreview.html" />
+    <Content Include="Umbraco\Views\dashboard\ChangePassword.html" />
+    <Content Include="Umbraco\Views\dashboard\default\azmisahin.png" />
+    <Content Include="Umbraco\Views\dashboard\default\StartupDashboardIntro.html" />
+    <Content Include="Umbraco\Views\dashboard\default\StartupDashboardKits.html" />
+    <Content Include="Umbraco\Views\dashboard\default\StartupDashboardLastEdits.html" />
+    <Content Include="Umbraco\Views\dashboard\default\StartupDashboardVideos.html" />
+    <Content Include="Umbraco\Views\dashboard\developer\developerdashboardintro.html" />
+    <Content Include="Umbraco\Views\dashboard\developer\developerdashboardvideos.html" />
+    <Content Include="Umbraco\Views\dashboard\developer\examinemanagement.html" />
+    <Content Include="Umbraco\Views\dashboard\developer\xmldataintegrityreport.html" />
+    <Content Include="Umbraco\Views\dashboard\forms\formsdashboardintro.html" />
+    <Content Include="Umbraco\Views\dashboard\media\desktopmediauploader.html" />
+    <Content Include="Umbraco\Views\dashboard\media\mediadashboardintro.html" />
+    <Content Include="Umbraco\Views\dashboard\media\mediadashboardvideos.html" />
+    <Content Include="Umbraco\Views\dashboard\media\mediafolderbrowser.html" />
+    <Content Include="Umbraco\Views\dashboard\members\membersdashboardintro.html" />
+    <Content Include="Umbraco\Views\dashboard\members\membersdashboardvideos.html" />
+    <Content Include="Umbraco\Views\dashboard\settings\settingsdashboardintro.html" />
+    <Content Include="Umbraco\Views\dashboard\settings\settingsdashboardvideos.html" />
+    <Content Include="Umbraco\Views\datatype\delete.html" />
+    <Content Include="Umbraco\Views\datatype\edit.html" />
+    <Content Include="Umbraco\Views\directives\button-group.html" />
+    <Content Include="Umbraco\Views\directives\html\umb-control-group.html" />
+    <Content Include="Umbraco\Views\directives\html\umb-pane.html" />
+    <Content Include="Umbraco\Views\directives\html\umb-panel.html" />
+    <Content Include="Umbraco\Views\directives\html\umb-photo-folder.html" />
+    <Content Include="Umbraco\Views\directives\html\umb-upload-dropzone.html" />
+    <Content Include="Umbraco\Views\directives\imaging\umb-image-crop.html" />
+    <Content Include="Umbraco\Views\directives\imaging\umb-image-folder.html" />
+    <Content Include="Umbraco\Views\directives\imaging\umb-image-gravity.html" />
+    <Content Include="Umbraco\Views\directives\imaging\umb-image-thumbnail.html" />
+    <Content Include="Umbraco\Views\directives\umb-avatar.html" />
+    <Content Include="Umbraco\Views\directives\umb-confirm.html" />
+    <Content Include="Umbraco\Views\directives\umb-content-name.html" />
+    <Content Include="Umbraco\Views\directives\umb-contextmenu.html" />
+    <Content Include="Umbraco\Views\directives\umb-editor.html" />
+    <Content Include="Umbraco\Views\directives\umb-header.html" />
+    <Content Include="Umbraco\Views\directives\umb-item-sorter.html" />
+    <Content Include="Umbraco\Views\directives\umb-login.html" />
+    <Content Include="Umbraco\Views\directives\umb-navigation.html" />
+    <Content Include="Umbraco\Views\directives\umb-notifications.html" />
+    <Content Include="Umbraco\Views\directives\umb-optionsmenu.html" />
+    <Content Include="Umbraco\Views\directives\umb-property.html" />
+    <Content Include="Umbraco\Views\directives\umb-sections.html" />
+    <Content Include="Umbraco\Views\directives\umb-tab-view.html" />
+    <Content Include="Umbraco\Views\directives\umb-tab.html" />
+    <Content Include="Umbraco\Views\directives\umb-tree-search-box.html" />
+    <Content Include="Umbraco\Views\directives\umb-tree-search-results.html" />
+    <Content Include="Umbraco\Views\install\continueinstall.html" />
+    <Content Include="Umbraco\Views\install\database.html" />
+    <Content Include="Umbraco\Views\install\error.html" />
+    <Content Include="Umbraco\Views\install\permissionsreport.html" />
+    <Content Include="Umbraco\Views\install\starterkit.html" />
+    <Content Include="Umbraco\Views\install\upgrade.html" />
+    <Content Include="Umbraco\Views\install\user.html" />
+    <Content Include="Umbraco\Views\install\version7upgradereport.html" />
+    <Content Include="Umbraco\Views\media\create.html" />
+    <Content Include="Umbraco\Views\media\delete.html" />
+    <Content Include="Umbraco\Views\media\edit.html" />
+    <Content Include="Umbraco\Views\media\emptyrecyclebin.html" />
+    <Content Include="Umbraco\Views\media\move.html" />
+    <Content Include="Umbraco\Views\media\recyclebin.html" />
+    <Content Include="Umbraco\Views\member\create.html" />
+    <Content Include="Umbraco\Views\member\delete.html" />
+    <Content Include="Umbraco\Views\member\edit.html" />
+    <Content Include="Umbraco\Views\member\list.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\boolean.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\hidden.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\imagepicker.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\mediapicker.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\multivalues.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\nodetype.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\number.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\radiobuttonlist.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\readonlykeyvalues.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\requiredfield.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\textarea.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\textstring.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\treepicker.html" />
+    <Content Include="Umbraco\Views\prevalueeditors\treesource.html" />
+    <Content Include="Umbraco\Views\propertyeditors\boolean\boolean.html" />
+    <Content Include="Umbraco\Views\propertyeditors\changepassword\changepassword.html" />
+    <Content Include="Umbraco\Views\propertyeditors\checkboxlist\checkboxlist.html" />
+    <Content Include="Umbraco\Views\propertyeditors\colorpicker\colorpicker.html" />
+    <Content Include="Umbraco\Views\propertyeditors\colorpicker\colorpicker.prevalues.html" />
+    <Content Include="Umbraco\Views\propertyeditors\contentpicker\contentpicker.html" />
+    <Content Include="Umbraco\Views\propertyeditors\datepicker\datepicker.html" />
+    <Content Include="Umbraco\Views\propertyeditors\dropdown\dropdown.html" />
+    <Content Include="Umbraco\Views\propertyeditors\email\email.html" />
+    <Content Include="Umbraco\Views\propertyeditors\entitypicker\entitypicker.html" />
+    <Content Include="Umbraco\Views\propertyeditors\fileupload\fileupload.html" />
+    <Content Include="Umbraco\Views\propertyeditors\folderbrowser\folderbrowser.html" />
+    <Content Include="Umbraco\Views\propertyeditors\googlemaps\googlemaps.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\config\grid.default.config.js" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\config\grid.default.rtestyles.css" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\dialogs\additem.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\dialogs\config.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\dialogs\editconfig.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\dialogs\layoutconfig.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\dialogs\rowconfig.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\dialogs\rowdeleteconfirm.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\editors\embed.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\editors\error.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\editors\macro.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\editors\media.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\editors\rte.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\editors\textstring.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\grid.html" />
+    <Content Include="Umbraco\Views\propertyeditors\grid\grid.prevalues.html" />
+    <Content Include="Umbraco\Views\propertyeditors\imagecropper\imagecropper.html" />
+    <Content Include="Umbraco\Views\propertyeditors\imagecropper\imagecropper.prevalues.html" />
+    <Content Include="Umbraco\Views\propertyeditors\integer\integer.html" />
+    <Content Include="Umbraco\Views\propertyeditors\listview\includeproperties.prevalues.html" />
+    <Content Include="Umbraco\Views\propertyeditors\listview\listview.html" />
+    <Content Include="Umbraco\Views\propertyeditors\listview\orderDirection.prevalues.html" />
+    <Content Include="Umbraco\Views\propertyeditors\listview\sortby.prevalues.html" />
+    <Content Include="Umbraco\Views\propertyeditors\macrocontainer\macrocontainer.html" />
+    <Content Include="Umbraco\Views\propertyeditors\macrocontainer\macrolist.prevalues.html" />
+    <Content Include="Umbraco\Views\propertyeditors\markdowneditor\markdowneditor.html" />
+    <Content Include="Umbraco\Views\propertyeditors\mediapicker\mediapicker.html" />
+    <Content Include="Umbraco\Views\propertyeditors\membergrouppicker\membergrouppicker.html" />
+    <Content Include="Umbraco\Views\propertyeditors\membergroups\membergroups.html" />
+    <Content Include="Umbraco\Views\propertyeditors\memberpicker\memberpicker.html" />
+    <Content Include="Umbraco\Views\propertyeditors\multipletextbox\multipletextbox.html" />
+    <Content Include="Umbraco\Views\propertyeditors\radiobuttons\radiobuttons.html" />
+    <Content Include="Umbraco\Views\propertyeditors\readonlyvalue\readonlyvalue.html" />
+    <Content Include="Umbraco\Views\propertyeditors\relatedlinks\relatedlinks.html" />
+    <Content Include="Umbraco\Views\propertyeditors\rte\rte.html" />
+    <Content Include="Umbraco\Views\propertyeditors\rte\rte.prevalues.html" />
+    <Content Include="Umbraco\Views\propertyeditors\slider\orientation.prevalues.html" />
+    <Content Include="Umbraco\Views\propertyeditors\slider\slider.html" />
+    <Content Include="Umbraco\Views\propertyeditors\tags\tags.html" />
+    <Content Include="Umbraco\Views\propertyeditors\tags\tags.prevalues.html" />
+    <Content Include="Umbraco\Views\propertyeditors\templatepicker\templatepicker.html" />
+    <Content Include="Umbraco\Views\propertyeditors\test\test.html" />
+    <Content Include="Umbraco\Views\propertyeditors\textarea\textarea.html" />
+    <Content Include="Umbraco\Views\propertyeditors\textbox\textbox.html" />
+    <Content Include="Umbraco\Views\propertyeditors\ultrasimple\ultrasimple.html" />
+    <Content Include="Umbraco\Views\propertyeditors\urllist\urllist.html" />
+    <Content Include="Umbraco\Views\propertyeditors\validationtest\validationtest.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+    <Content Include="Cms.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Storage\Content\img\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53261</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53261/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,22 @@
+﻿<div>
+    <h1>Binbaşı sürüm yükseltme {{installer.current.model.currentVersion}} to {{installer.current.model.newVersion}}</h1>
+    <h2>Vardı {{installer.current.model.errors.length}} sorunlar tespit</h2>
+    <p>
+        Aşağıdaki uyumluluk sorunları bulundu . Devam ederseniz , tüm uyumlu olmayan mülkiyet editörleri Readonly / Etiket dönüştürülür .
+        El kurulumdan sonra veri türü düzenleyerek uyumlu bir tip mülkiyet editörü değiştirmek mümkün olacak .
+    </p>
+    <p>
+        Devam için tercih Aksi takdirde aşağıda listelenen hataları düzeltmek gerekir.
+        Bakın v{{installer.current.model.newVersion}} Tüm ayrıntılar için talimatlar yükseltin.
+    </p>
+    
+    <ul class="upgrade-report">
+        <li ng-repeat="item in installer.current.model.errors">
+            {{item}}
+        </li>
+    </ul>
+    
+    <p>
+        <button class="btn btn-success" ng-click="forward()">Devam</button>
+   </p>
+</div>

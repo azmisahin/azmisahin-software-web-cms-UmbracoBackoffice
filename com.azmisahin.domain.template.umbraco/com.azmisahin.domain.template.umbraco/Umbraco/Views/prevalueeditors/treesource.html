@@ -1,0 +1,77 @@
+<div ng-controller="Umbraco.PrevalueEditors.TreeSourceController" class="umb-editor umb-contentpicker">
+
+	<select ng-model="model.value.type" class="umb-editor" ng-change="clear()">
+		<option value="content">Ýçerik</option>
+		<option value="media">Medya</option>
+		<option value="member">Üyeler</option>
+	</select>
+
+	<ul class="unstyled list-icons" ng-if="node" style="margin-top: 30px">	
+		<li>	
+			<i class="icon icon-delete red hover-show pull-right" ng-click="clear()"></i>
+			<i class="icon {{node.icon}} hover-hide"></i>
+			
+			<a href prevent-default ng-click="openContentPicker()" >{{node.name}}</a>
+		</li>
+	</ul>
+
+	<div ng-if="!node && model.value.type !== 'member'" style="margin-top: 30px">	
+		<span ng-hide="showSearch || model.value.query">
+			<ul class="unstyled list-icons">	
+				<li>	
+					<i class="icon icon-add blue"></i>
+					<a href ng-click="openContentPicker()" prevent-default>
+						<localize key="general_choose">Bir kök düðümü seçin</localize>...
+					</a>
+				</li>
+				<li ng-show="model.value.type == 'content'">
+					<i class="icon icon-search"></i>
+					<a href ng-click="showSearch = true">Xpath kök düðümü için Sorgu</a>
+				</li>
+			</ul>
+		</span>
+
+		<span ng-show="showSearch || model.value.query">
+			
+			<input type="text" 
+				ng-model="model.value.query" 
+				class="umb-editor umb-textstring" 
+				placeholder="Enter xpath query">
+
+				<ul class="unstyled list-icons" style="margin-top: 15px">	
+					<li style="max-width: 600px">	
+						<i class="icon icon-help-alt"></i>
+						<a href ng-click="showHelp = 1" prevent-default>
+							Show xpath query help
+						</a>
+
+						<small ng-if="showHelp">
+							<p>
+                                Kullaným XPath sorgusu ya içerik aðacýnýn kökünden bir arama dayalý , ya da bir baðlam farkýnda yer tutucu kullanarak aðaç üzerinde bir kök düðümünü ayarlamak için .
+							</p>
+
+							<p>
+                                Yer tutucular yakýn yayýnlanmýþ kimliði bulur ve oradan da sorguyu çalýþtýrýr . Örneðin , böylece :
+
+								<pre>$parent/newsArticle</pre>
+
+                                Varsa üst almak için çalýþacaðýz , ama sonra orada her haberin en yakýn atasý ve sorguya geri düþecek .
+							</p>
+
+							<p>
+                                Mevcut tutucular : <br/>
+								<code>$current</code>: Geçerli sayfayý veya en yakýn FOUND atasý<br/>
+								<code>$parent</code>: parent page or closest found ancestor<br/>
+								<code>$root</code>: Ýçerik aðacýnýn kökü<br/>
+								<code>$site</code>: Seviye 1 Atasý düðüm <br/>
+							</p>
+						</small>
+					</li>
+					<li>
+						<i class="icon icon-delete red"></i>
+						<a href ng-click="showSearch = false; model.value.query = ''"> Ýptal ve net sorgu</a>
+					</li>
+				</ul>
+		</span>
+	</div>
+</div>

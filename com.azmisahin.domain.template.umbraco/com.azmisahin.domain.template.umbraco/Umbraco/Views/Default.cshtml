@@ -1,0 +1,140 @@
+﻿@using System.Net.Http
+@using System.Web.Mvc.Html
+@using Umbraco.Core
+@using ClientDependency.Core
+@using ClientDependency.Core.Mvc
+@using Umbraco.Core.IO
+@using Umbraco.Web
+@using Umbraco.Web.Editors
+@using umbraco
+
+@inherits System.Web.Mvc.WebViewPage
+
+
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+    <base href="@GlobalSettings.Path.EnsureEndsWith('/')" />    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex, nofollow">
+
+    <title ng-bind="$root.locationTitle">İçerik Yönetim Sistemi</title>
+    
+    @{ Html.RequiresCss("assets/css/umbraco.css", "Umbraco");}
+    @{ Html.RequiresCss("tree/treeicons.css", "UmbracoClient");}
+    @Html.RenderCssHere(
+        new BasicPath("Umbraco", IOHelper.ResolveUrl(SystemDirectories.Umbraco)),
+        new BasicPath("UmbracoClient", IOHelper.ResolveUrl(SystemDirectories.UmbracoClient)))
+    
+    <meta name="description" content="Yazılım Geliştirme, Web Uygulama Çözümleri, Kurumsal Destek, Bilimsel Çalışmalar, Eğitim Destek Hizmetleri" />
+    <meta name="keywords" content="Yazılım Geliştirme, Web Uygulama Çözümleri, Kurumsal Destek, Bilimsel Çalışmalar, Eğitim Destek Hizmetleri" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Azmi ŞAHİN | Yazılım Geliştirm Uzamnı | Bilim İnsanı | Eğitmen" />
+    <meta property="og:description" content="Yazılım Geliştirme, Web Uygulama Çözümleri, Kurumsal Destek, Bilimsel Çalışmalar, Eğitim Destek Hizmetleri" />
+    <meta property="og:image" content="azmisahin.github.io/favicon.jpg" />
+    <meta property="og:url" content="www.azmisahin.com" />
+    <meta property="og:locale" content="tr_TR" />
+
+    <meta itemprop="name" content="Azmi ŞAHİN | Senior Software Developer | Scientist | Instructor" />
+    <meta itemprop="description" content="Yazılım Geliştirme, Web Uygulama Çözümleri, Kurumsal Destek, Bilimsel Çalışmalar, Eğitim Destek Hizmetleri" />
+    <meta itemprop="image" content="azmisahin.github.io/favicon.jpg" />
+
+    <link rel="canonical" href="http://www.azmisahin.com" />
+    <link rel="shortlink" href="http://www.azmisahin.com" />
+    <link rel="alternate" hreflang="tr" href="http://www.azmisahin.com" />
+    <link rel="prev" title="Home" href="http://www.azmisahin.com" />
+    <link rel="next" title="About" href="http://www.azmisahin.com" />
+    <link rel="icon" href="https://azmisahin.github.io/favicon.png" />
+    <link rel="shortcut icon" href="https://azmisahin.github.io/favicon.png" />
+    <link rel="apple-touch-icon" href="https://azmisahin.github.io/favicon.png" />
+
+    <meta name="author" content="Azmi ŞAHİN" />
+    <meta name="generator" content="bilgi@azmisahin.com" />
+
+    <style class="ng-scope">
+        .login-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2000;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0 !Important;
+            color: #fff;
+            background: #1d1d1d url("https://azmisahin.github.io/favicon.png") no-repeat 25px 30px fixed !important;
+            background-size: 30px 30px !important;
+            border-radius: 0;
+        }
+        section .logo {
+            background: url("https://azmisahin.github.io/favicon.png") no-repeat;
+            width: 91px;
+            height: 91px;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+<body ng-class="{touch:touchDevice,emptySection:emptySection}" ng-controller="Umbraco.MainController" id="umbracoMainPageBody">
+    <div ng-hide="!authenticated" ng-cloak id="mainwrapper"  id="mainwrapper" class="clearfix" ng-click="closeDialogs($event)">
+
+        <umb-navigation></umb-navigation>
+
+        <section id="contentwrapper">
+            <div id="contentcolumn" ng-view>
+            </div>
+        </section>
+
+    </div>
+
+    <umb-notifications></umb-notifications>
+
+
+    @*
+        These are the bare minimal server variables that are required for the application to start without being authenticated,
+        we will load the rest of the server vars after the user is authenticated.
+    *@    
+    <script type="text/javascript">
+        var Umbraco = {};
+        Umbraco.Sys = {};
+        Umbraco.Sys.ServerVariables = {
+            "umbracoUrls": {                
+                "authenticationApiBaseUrl": "@(Url.GetUmbracoApiServiceBaseUrl<AuthenticationController>(controller => controller.PostLogin(null)))",
+                "serverVarsJs": '@Url.GetUrlWithCacheBust("ServerVariables", "BackOffice")'
+            },
+            "application": {
+                "applicationPath" : "@Context.Request.ApplicationPath"
+            }
+        };       
+    </script>
+
+    @*And finally we can load in our angular app*@
+    <script type="text/javascript" src="lib/rgrove-lazyload/lazyload.js"></script>
+    <script type="text/javascript" src="@Url.GetUrlWithCacheBust("Application", "BackOffice")"></script>
+    
+    @{
+        var isDebug = false;
+        if (Request.RawUrl.IndexOf('?') >= 0)
+        {
+            var parsed = HttpUtility.ParseQueryString(Request.RawUrl.Split('?')[1]);
+            var attempt = parsed["umbDebug"].TryConvertTo<bool>();
+            if (attempt && attempt.Result)
+            {
+                isDebug = true;
+            } 
+        }
+        
+    }
+    @if (isDebug)
+    {
+        @Html.RenderProfiler()
+    }
+
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<div ng-controller="Umbraco.Dashboard.FormsDashboardController" class="umb-dashboards-forms-install">
+	<div style="max-width: 800px; text-align: center; margin: auto; padding: 20px; min-height: 800px;">
+
+		<div class="installer-top"> <!-- ADDED -->
+			<i style="font-size: 80px" class="icon icon-umb-contour"></i>
+			<h3>Formlar</h3>
+		</div> <!-- ADDED -->
+
+		<div class="step-one" ng-hide="state"> <!-- STEP one -->
+
+			<div id="video_1" class="video_player" style="margin-bottom: 40px">
+				<video autoplay loop>
+					<!-- <source src="videos/gif.webm" type="video/webm"> -->
+					<source src="//player.vimeo.com/external/110229004.hd.mp4?s=823f701836260bd08fb783d38389f628" type="video/mp4">
+                    Üzgünüm, HTML5 video var yok ve biz javascript düzgün bu anlayamadým .
+				</video>
+			</div>
+
+			<p style="font-size: 16px; line-height: 1.5; color: #4c4c4c;">
+                Sezgisel sürükle kullanarak formlar oluþturun ve býrak arabirimi . CRM sistemleri ile entegre , geliþmiþ anketler e- postalar gönderir basit iletiþim biçimlerinden . Müþterileriniz seveceksiniz
+            </p>
+
+			<button class="btn publish btn-install" ng-click="installForms()">Kur</button>
+		</div>
+
+		<div class="step-two" ng-if="state"> <!-- STEP two -->
+			<p id="installer" style="font-size: 16px; line-height: 1.5; color: #4c4c4c;">Kuruluyor...</p>
+
+			<div class="installing">
+				<div style="width: 99%; overflow: hidden" ng-if="state">
+					<div class="umb-loader"></div>
+					<small>{{state}}</small>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

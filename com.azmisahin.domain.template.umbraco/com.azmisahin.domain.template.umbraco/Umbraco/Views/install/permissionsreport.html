@@ -1,0 +1,25 @@
+﻿<div>
+    <h1>Sizin izin ayarları Umbraco için hazır değil</h1>
+    <p>        
+        CMS çalıştırmak için, size izin ayarlarınızı güncellemeniz gerekir .
+        CMS için doğru dosya ve klasör izinleri hakkında detaylı bilgi bulabilirsiniz        
+    </p>
+    <p>
+        Aşağıdaki rapor listesi şu anda başarısız izinler . Izinler basın sabit kez ' Geri dönün ' düğmesine yüklemeyi yeniden başlatın.
+    </p>
+    
+    <ul class="permissions-report">
+        <li ng-repeat="(category, items) in installer.current.model.errors">
+            <h4>{{category}}</h4>
+            <ul>
+                <li ng-repeat="item in items">
+                    {{item}}
+                </li>
+            </ul>
+        </li>
+    </ul>
+    
+    <p>
+        <button class="btn btn-success" ng-click="restart()">Geri dön</button>
+   </p>
+</div>
