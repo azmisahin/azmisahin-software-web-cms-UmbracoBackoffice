@@ -1,7 +1,7 @@
-<div ng-controller="Umbraco.Install.UserController">
+ï»¿<div ng-controller="Umbraco.Install.UserController">
 <h1>CMS Kurulumu</h1>
 
-<p>Alternatif yüklemenizi özelleştirebilirsiniz , varsayılan ayarları ile CMS yüklemek için adınız , e-posta ve şifrenizi girin</p>
+<p>Alternatif yÃ¼klemenizi Ã¶zelleÅŸtirebilirsiniz , varsayÄ±lan ayarlarÄ± ile CMS yÃ¼klemek iÃ§in adÄ±nÄ±z , e-posta ve ÅŸifrenizi girin</p>
 
 <form name="myForm" class="form-horizontal" novalidate ng-submit="validateAndInstall();">
 
@@ -19,7 +19,7 @@
 					<label class="control-label" for="email">E-Posta</label>
 					    <div class="controls">
 						<input type="text" id="email" name="email" placeholder="sen@ornek.com" required ng-model="installer.current.model.email" val-email />
-						<small class="inline-help">Sizin e-posta giriş olarak kullanılacak</small>
+						<small class="inline-help">Sizin e-posta giriÅŸ olarak kullanÄ±lacak</small>
 					</div>
 				</div>
 
@@ -48,7 +48,7 @@
 					<div class="controls">
 						<label class="checkbox" for="subscribeToNewsLetter">
 							<input type="checkbox" id="subscribeToNewsLetter" name="subscribeToNewsLetter"
-							ng-model="installer.current.model.subscribeToNewsLetter"  /> Bana CMS sürümleri , Güvenlik Bültenleri ve Toplum News güncellenen tutun</label>
+							ng-model="installer.current.model.subscribeToNewsLetter"  /> Bana CMS sÃ¼rÃ¼mleri , GÃ¼venlik BÃ¼ltenleri ve Toplum News gÃ¼ncellenen tutun</label>
 					</div>
 				</div>
 
@@ -57,7 +57,7 @@
 
 						<input type="submit" ng-disabled="myForm.$invalid"  value="Install" class="btn btn-success" />
 						
-						<a href class="btn btn-neutral control-customize" ng-disabled="myForm.$invalid" ng-click="validateAndForward()">özelleştirme</a>
+						<a href class="btn btn-neutral control-customize" ng-disabled="myForm.$invalid" ng-click="validateAndForward()">Ã¶zelleÅŸtirme</a>
 					</div>
 				</div>
 

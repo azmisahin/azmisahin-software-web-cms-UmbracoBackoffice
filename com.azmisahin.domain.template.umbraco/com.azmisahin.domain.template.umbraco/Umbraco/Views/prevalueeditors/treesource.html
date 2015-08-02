@@ -1,9 +1,9 @@
-<div ng-controller="Umbraco.PrevalueEditors.TreeSourceController" class="umb-editor umb-contentpicker">
+ï»¿<div ng-controller="Umbraco.PrevalueEditors.TreeSourceController" class="umb-editor umb-contentpicker">
 
 	<select ng-model="model.value.type" class="umb-editor" ng-change="clear()">
-		<option value="content">İçerik</option>
+		<option value="content">Ä°Ã§erik</option>
 		<option value="media">Medya</option>
-		<option value="member">Üyeler</option>
+		<option value="member">Ãœyeler</option>
 	</select>
 
 	<ul class="unstyled list-icons" ng-if="node" style="margin-top: 30px">	
@@ -21,12 +21,12 @@
 				<li>	
 					<i class="icon icon-add blue"></i>
 					<a href ng-click="openContentPicker()" prevent-default>
-						<localize key="general_choose">Bir kök düğümü seçin</localize>...
+						<localize key="general_choose">Bir kÃ¶k dÃ¼ÄŸÃ¼mÃ¼ seÃ§in</localize>...
 					</a>
 				</li>
 				<li ng-show="model.value.type == 'content'">
 					<i class="icon icon-search"></i>
-					<a href ng-click="showSearch = true">Xpath kök düğümü için Sorgu</a>
+					<a href ng-click="showSearch = true">Xpath kÃ¶k dÃ¼ÄŸÃ¼mÃ¼ iÃ§in Sorgu</a>
 				</li>
 			</ul>
 		</span>
@@ -47,29 +47,29 @@
 
 						<small ng-if="showHelp">
 							<p>
-                                Kullanım XPath sorgusu ya içerik ağacının kökünden bir arama dayalı , ya da bir bağlam farkında yer tutucu kullanarak ağaç üzerinde bir kök düğümünü ayarlamak için .
+                                KullanÄ±m XPath sorgusu ya iÃ§erik aÄŸacÄ±nÄ±n kÃ¶kÃ¼nden bir arama dayalÄ± , ya da bir baÄŸlam farkÄ±nda yer tutucu kullanarak aÄŸaÃ§ Ã¼zerinde bir kÃ¶k dÃ¼ÄŸÃ¼mÃ¼nÃ¼ ayarlamak iÃ§in .
 							</p>
 
 							<p>
-                                Yer tutucular yakın yayınlanmış kimliği bulur ve oradan da sorguyu çalıştırır . Örneğin , böylece :
+                                Yer tutucular yakÄ±n yayÄ±nlanmÄ±ÅŸ kimliÄŸi bulur ve oradan da sorguyu Ã§alÄ±ÅŸtÄ±rÄ±r . Ã–rneÄŸin , bÃ¶ylece :
 
 								<pre>$parent/newsArticle</pre>
 
-                                Varsa üst almak için çalışacağız , ama sonra orada her haberin en yakın atası ve sorguya geri düşecek .
+                                Varsa Ã¼st almak iÃ§in Ã§alÄ±ÅŸacaÄŸÄ±z , ama sonra orada her haberin en yakÄ±n atasÄ± ve sorguya geri dÃ¼ÅŸecek .
 							</p>
 
 							<p>
                                 Mevcut tutucular : <br/>
-								<code>$current</code>: Geçerli sayfayı veya en yakın FOUND atası<br/>
+								<code>$current</code>: GeÃ§erli sayfayÄ± veya en yakÄ±n FOUND atasÄ±<br/>
 								<code>$parent</code>: parent page or closest found ancestor<br/>
-								<code>$root</code>: İçerik ağacının kökü<br/>
-								<code>$site</code>: Seviye 1 Atası düğüm <br/>
+								<code>$root</code>: Ä°Ã§erik aÄŸacÄ±nÄ±n kÃ¶kÃ¼<br/>
+								<code>$site</code>: Seviye 1 AtasÄ± dÃ¼ÄŸÃ¼m <br/>
 							</p>
 						</small>
 					</li>
 					<li>
 						<i class="icon icon-delete red"></i>
-						<a href ng-click="showSearch = false; model.value.query = ''"> İptal ve net sorgu</a>
+						<a href ng-click="showSearch = false; model.value.query = ''"> Ä°ptal ve net sorgu</a>
 					</li>
 				</ul>
 		</span>

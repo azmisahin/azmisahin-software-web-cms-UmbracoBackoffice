@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="Umbraco.Web.UI.Config.Splashes.NoNodes" CodeBehind="NoNodes.aspx.cs" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="True" Inherits="Umbraco.Web.UI.Config.Splashes.NoNodes" CodeBehind="NoNodes.aspx.cs" %>
 <%@ Import Namespace="Umbraco.Core.Configuration" %>
 <%@ Import Namespace="Umbraco.Core.IO" %>
 
@@ -56,26 +56,26 @@
 		<div>
 			<div class="logo"></div>
 
-			<h1>İçerik Yönetim Sistemi Kurulumuna Hoşgeldiniz.</h1>
-			<h3>Web sitenizin henüz yayınlanmış içerik içermiyor çünkü harika sayfayı görüyorsunuz.</h3>
+			<h1>Ä°Ã§erik YÃ¶netim Sistemi Kurulumuna HoÅŸgeldiniz.</h1>
+			<h3>Web sitenizin henÃ¼z yayÄ±nlanmÄ±ÅŸ iÃ§erik iÃ§ermiyor Ã§Ã¼nkÃ¼ harika sayfayÄ± gÃ¶rÃ¼yorsunuz.</h3>
 
 			<div class="cta">
-				<%--<a href="<%= IOHelper.ResolveUrl(SystemDirectories.Umbraco) %>" class="button">Yönet</a>--%>
-                <a href="/Manage" class="button">Yönet</a>
+				<%--<a href="<%= IOHelper.ResolveUrl(SystemDirectories.Umbraco) %>" class="button">YÃ¶net</a>--%>
+                <a href="/Manage" class="button">YÃ¶net</a>
 			</div>
 
 
 			<div class="row">
 				<div class="col">
-					<h2>azmisahin.com ile kolay bir başlangıç</h2>
-					<p>Biz, 'nasıl yapılır' videoları bir demet oluşturduk kolayca CMS başlamak için. Dakika sadece birkaç projeleri oluşturmak öğrenin. Dünyadaki kolay CMS.</p>
+					<h2>azmisahin.com ile kolay bir baÅŸlangÄ±Ã§</h2>
+					<p>Biz, 'nasÄ±l yapÄ±lÄ±r' videolarÄ± bir demet oluÅŸturduk kolayca CMS baÅŸlamak iÃ§in. Dakika sadece birkaÃ§ projeleri oluÅŸturmak Ã¶ÄŸrenin. DÃ¼nyadaki kolay CMS.</p>
 					
 					<a href="https://azmisahin.github.io" target="_blank">CMS &rarr;</a>
 				</div>
 
 				<div class="col">
-					<h2>Toplumun bir parçası olun</h2>
-					<p>CMS topluluk türünün en iyisi, ziyaret ettiğinizden emin olun ve herhangi bir sorunuz varsa, biz size eden cevaplarınızı alabilirsiniz eminiz.</p>
+					<h2>Toplumun bir parÃ§asÄ± olun</h2>
+					<p>CMS topluluk tÃ¼rÃ¼nÃ¼n en iyisi, ziyaret ettiÄŸinizden emin olun ve herhangi bir sorunuz varsa, biz size eden cevaplarÄ±nÄ±zÄ± alabilirsiniz eminiz.</p>
 					
 					<a href="https://azmisahin.github.io" target="_blank">cms</a>
 				</div>

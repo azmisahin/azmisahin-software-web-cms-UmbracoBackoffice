@@ -1,59 +1,59 @@
-<div ng-controller="Umbraco.Installer.DataBaseController">
+ï»¿<div ng-controller="Umbraco.Installer.DataBaseController">
 
-    <h1>Veritabanı yapılandırma</h1>
+    <h1>VeritabanÄ± yapÄ±landÄ±rma</h1>
     <p>
-        Üzerinde CMS yüklemek istediğiniz veritabanı için bağlantı ve kimlik doğrulama bilgilerini girin
+        Ãœzerinde CMS yÃ¼klemek istediÄŸiniz veritabanÄ± iÃ§in baÄŸlantÄ± ve kimlik doÄŸrulama bilgilerini girin
     </p>
 
     <form name="myForm" class="form-horizontal" novalidate ng-submit="validateAndForward();">
         <div class="control-group">
             <legend>What type of database do you use?</legend>
-            <label class="control-label" for="dbType">Veritabanı türü</label>
+            <label class="control-label" for="dbType">VeritabanÄ± tÃ¼rÃ¼</label>
             <div class="controls">
                 <select name="dbType" ng-options="db.id as db.name for db in dbs" ng-model="installer.current.model.dbType" required></select>
             </div>
         </div>
 
         <div class="controls" ng-if="installer.current.model.dbType == 0">
-            <p> Büyük !, şey yapılandırmak gerek daha sonra , sadece <strong> Devam </strong> aşağıdaki butonu ile bir sonraki adımla devam etmek </p>
+            <p> BÃ¼yÃ¼k !, ÅŸey yapÄ±landÄ±rmak gerek daha sonra , sadece <strong> Devam </strong> aÅŸaÄŸÄ±daki butonu ile bir sonraki adÄ±mla devam etmek </p>
         </div>
 
 
 
         <div ng-if="installer.current.model.dbType < 0">
 
-            <legend>ConnectionString kullanmalısınız ?</legend>
+            <legend>ConnectionString kullanmalÄ±sÄ±nÄ±z ?</legend>
             <div class="control-group">
-                <label class="control-label" for="server">Bağlantı dizesi</label>
+                <label class="control-label" for="server">BaÄŸlantÄ± dizesi</label>
                 <div class="controls">
 
                     <textarea class="input-block-level" required ng-model="installer.current.model.connectionString" rows="5"></textarea>
-                    <small class="inline-help">Geçerli bir veritabanı bağlantı dizesini girin.</small>
+                    <small class="inline-help">GeÃ§erli bir veritabanÄ± baÄŸlantÄ± dizesini girin.</small>
                 </div>
             </div>
         </div>
 
         <div ng-if="installer.current.model.dbType > 0">
             <div class="row">
-                <legend>Nerede veritabanı bulurum?</legend>
+                <legend>Nerede veritabanÄ± bulurum?</legend>
                 <div class="span6">
                     <div class="control-group">
                         <label class="control-label" for="server">Sunucu</label>
                         <div class="controls">
                             <input type="text" name="server" placeholder="127.0.0.1/SQLEXPRESS" required ng-model="installer.current.model.server" />
-                            <small class="inline-help">Sunucu alanını veya IP'sini girin</small>
+                            <small class="inline-help">Sunucu alanÄ±nÄ± veya IP'sini girin</small>
                         </div>
                     </div>
                 </div>
 
                 <div class="span6">
                     <div class="control-group">
-                        <label class="control-label" for="databaseName">Veritabanı adı</label>
+                        <label class="control-label" for="databaseName">VeritabanÄ± adÄ±</label>
                         <div class="controls">
                             <input type="text" name="installer.current.model.databaseName"
                                    placeholder="umbraco-cms"
                                    required ng-model="installer.current.model.databaseName" />
-                            <small class="inline-help">Veritabanının adını girin</small>
+                            <small class="inline-help">VeritabanÄ±nÄ±n adÄ±nÄ± girin</small>
                         </div>
                     </div>
                 </div>
@@ -61,15 +61,15 @@
 
 
             <div class="row">
-                <legend>Ne kimlik veritabanına erişmek için kullanılır ?</legend>
+                <legend>Ne kimlik veritabanÄ±na eriÅŸmek iÃ§in kullanÄ±lÄ±r ?</legend>
                 <div class="span6">
                     <div class="control-group" ng-if="!installer.current.model.integratedAuth">
-                        <label class="control-label" for="login">Giriş</label>
+                        <label class="control-label" for="login">GiriÅŸ</label>
                         <div class="controls">
                             <input type="text" name="login"
                                    placeholder="databaseuser"
                                    required ng-model="installer.current.model.login" />
-                            <small class="inline-help">Veritabanı kullanıcı adını girin</small>
+                            <small class="inline-help">VeritabanÄ± kullanÄ±cÄ± adÄ±nÄ± girin</small>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                             <input type="password" name="password"
                                    placeholder="umbraco-cms"
                                    required ng-model="installer.current.model.password" />
-                            <small class="inline-help">Veritabanı parolasını girin</small>
+                            <small class="inline-help">VeritabanÄ± parolasÄ±nÄ± girin</small>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                         <label class="checkbox" for="integratedAuth">
                             <input type="checkbox" name="integratedAuth"
                                    placeholder="umbraco-cms"
-                                   ng-model="installer.current.model.integratedAuth" /> Tümleşik kimlik doğrulaması kullan
+                                   ng-model="installer.current.model.integratedAuth" /> TÃ¼mleÅŸik kimlik doÄŸrulamasÄ± kullan
                         </label>
                     </div>
                 </div>
@@ -104,14 +104,14 @@
                     <input type="submit" ng-disabled="myForm.$invalid || checking"
                            value="Continue" class="btn btn-success" />
 
-                    <button class="btn" ng-click="restart()">Geri dön</button>
+                    <button class="btn" ng-click="restart()">Geri dÃ¶n</button>
 
                     <span class="inline-help" ng-if="checking" ng-animate="'fade'">
-                        Veritabanı bağlantısı doğrulanıyor ...
+                        VeritabanÄ± baÄŸlantÄ±sÄ± doÄŸrulanÄ±yor ...
                     </span>
 
                     <span class="inline-help error" ng-if="invalidDbDns" ng-animate="'fade'">
-                        Veritabanına bağlanmak olamazdı.
+                        VeritabanÄ±na baÄŸlanmak olamazdÄ±.
                     </span>
                 </div>
             </div>

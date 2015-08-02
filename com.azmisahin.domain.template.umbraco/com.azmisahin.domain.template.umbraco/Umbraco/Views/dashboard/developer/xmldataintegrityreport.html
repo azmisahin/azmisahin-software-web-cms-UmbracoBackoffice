@@ -1,14 +1,14 @@
-<div id="examineManagement" ng-controller="Umbraco.Dashboard.XmlDataIntegrityReportController">
+ï»¿<div id="examineManagement" ng-controller="Umbraco.Dashboard.XmlDataIntegrityReportController">
 
     <h3>Xml Cache Data integrity</h3>
 
     <div ng-show="loading">
-        Yükleniyor...
+        YÃ¼kleniyor...
     </div>
 
     <p>
-        Bu cmsContentXml tabloda depolanan içerik, medya ve üyeleri için xml yapıları için veri bütünlüğünü denetler .
-        Bu xml önbellek dosyası veri bütünlüğü , xml önbellek dosyası oluşturmak için kullanılan veritabanında saklanan tek xml yapılarını kontrol etmez .
+        Bu cmsContentXml tabloda depolanan iÃ§erik, medya ve Ã¼yeleri iÃ§in xml yapÄ±larÄ± iÃ§in veri bÃ¼tÃ¼nlÃ¼ÄŸÃ¼nÃ¼ denetler .
+        Bu xml Ã¶nbellek dosyasÄ± veri bÃ¼tÃ¼nlÃ¼ÄŸÃ¼ , xml Ã¶nbellek dosyasÄ± oluÅŸturmak iÃ§in kullanÄ±lan veritabanÄ±nda saklanan tek xml yapÄ±larÄ±nÄ± kontrol etmez .
     </p>
     <div ng-repeat="(key, value) in items" class="umb-pane">
         <span class="">{{value.label}}&nbsp;...</span>
